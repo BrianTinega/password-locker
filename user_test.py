@@ -26,6 +26,11 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         test_user = User("Mick","6789")
         test_user.save_user()
+    def test_delete_user(self):
+        self.new_user.save_user()
+        self.new_user.delete_user()
+        test_user = User("Mick","6789")
+        test_user.save_user()
 
 
 if __name__== '__main__':
