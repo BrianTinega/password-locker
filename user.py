@@ -22,4 +22,9 @@ class User:
         A function that deletes a users credentials
         '''
         User.users_list.remove(self)
-
+    @classmethod
+    def display_users(cls):
+        '''
+        A function that displays all users saved in a user list
+        '''
+        return cls.users_list
