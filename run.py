@@ -12,6 +12,11 @@ def save_user(self):
     A function that allows us to save users password
     '''
     User.users_list.append(self) 
-   
+
+def delete_user(self):
+    '''
+    A function that deletes a users credentials
+    '''
+    User.users_list.remove(self)  
    
  
