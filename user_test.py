@@ -8,14 +8,25 @@ class TestUser(unittest.TestCase):
     new_user=User("Brian","12345")
     def SetUp(self):
         self.new_user = User ("Brian","12345")
+    def tearDown(self):
+        '''
+        Function that clears after every test runs
+        '''
+        User.users_list=[]
 
     def test_init_(self):
         self.assertEqual(self.new_user.name,"Brian")
         self.assertEqual(self.new_user.password,"12345")
     
-    def test_save_password(self):
-        self.new_user.save_password()
+    def test_save_user(self):
+        self.new_user.save_user()
         self.assertEqual(len(User.users_list),1)
+
+    def test_save_multiple_users(self):
+        self.new_user.save_user()
+        test_user = User("Mick","6789")
+        test_user.save_user()
+
 
 if __name__== '__main__':
     unittest.main()
