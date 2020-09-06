@@ -47,6 +47,10 @@ def main():
             else:
                 print("No users created yet")
 
+        elif commands == 'del':
+            if delete_user():
+                print("Are you sure you want to delete users?Y or N")
+                short_code == input().upper()
 
 
 main()
