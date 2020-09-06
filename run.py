@@ -13,4 +13,11 @@ def save_user(user):
     user.save_contact()
 def delete_user(user):
     '''
-    
+    A function that deletes a user upon request
+    '''
+    user.delete_user()
+def display_users():
+    '''
+    A function that displays all registered users
+    '''
+    return User.display_users()
