@@ -21,3 +21,9 @@ def display_users():
     A function that displays all registered users
     '''
     return User.display_users()
+
+def main():
+    print("Welcome to password locker..What is your name?")
+    name = input()
+    print(f"Welcome {name}")
+main()
