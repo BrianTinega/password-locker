@@ -48,9 +48,19 @@ def main():
                 print("No users created yet")
 
         elif commands == 'del':
-            if delete_user():
-                print("Are you sure you want to delete users?Y or N")
-                short_code == input().upper()
+            print("Delete credentials")
+            while True:
+               print("enter saved name")
+               del_name = input()
+               print("enter saved password")
+               del_password = input()
+               if del_name and del_password:
+                   found_credentials= user.save_user
+                   print(f"{name} and {password} will be deleted" )
+                   delete_user(found_credentials)
+                   
+                        
+                    
 
 
 main()

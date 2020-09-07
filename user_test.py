@@ -1,6 +1,5 @@
 import unittest
 from user import User
-
 class TestUser(unittest.TestCase):
     '''
     Test class that defines test cases for user class behaviours
@@ -31,13 +30,18 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()
         test_user = User("Mick","6789")
         test_user.save_user()
+        self.assertEqual(len(User.users_list),1)
     def test_display_users(self):
         self.new_user.save_user()
         test_user = User ("Mick","6789")
         test_user.save_user()
         self.assertEqual(User.display_users(),User.users_list)
-
-if __name__== '__main__':
+    def test_find_user_by_name(self):
+        self.new_user.save_user()
+        test_user= User("Mick","6789")
+        test_user.save_user()
+        found_user = User.find_user_by_name("Mick")
+        import pdb; pdb.set_trace()
+        self.assertEqual(found_user.password,test_user.password)
+if __name__ == '__main__':
     unittest.main()
-
-  
