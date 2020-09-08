@@ -48,7 +48,7 @@ def main():
                 print("No users created yet")           
         elif commands == 'del':
             user == input().su
-            delete_user() 
+            delete_user(user) 
             print("Delete successful")
           
         elif commands == 'ex':

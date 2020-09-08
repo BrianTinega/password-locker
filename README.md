@@ -11,7 +11,7 @@
 * Launch using :./run.py
 * test using :Python3.6 user_test.py
 ## Known Bugs
-No bugs
+  On using "del" an error of UnboundLocalError displays
 ## Technologies Used
 Python
 ## Support and contact details
