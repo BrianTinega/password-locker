@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 from user import User
+
 def sign_up(name,password):
     '''
     A function that allows a user to sign up
@@ -46,12 +47,15 @@ def main():
             else:
                 print("No users created yet")           
         elif commands == 'del':
-            delete_user(user) 
+            user == input().su
+            delete_user() 
             print("Delete successful")
           
         elif commands == 'ex':
             print("Goodbye")
-            break  
+            break
+        else:
+            print("Kindly use the above codes only")  
                
             
                 
