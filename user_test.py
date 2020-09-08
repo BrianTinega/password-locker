@@ -27,7 +27,7 @@ class TestUser(unittest.TestCase):
         test_user.save_user()
     def test_delete_user(self):
         self.new_user.save_user()
-        self.new_user.delete_user()
+        self.new_user.delete_user_credential()
         test_user = User("Mick","6789")
         test_user.save_user()
         self.assertEqual(len(User.users_list),1)
@@ -41,7 +41,7 @@ class TestUser(unittest.TestCase):
         test_user= User("Mick","6789")
         test_user.save_user()
         found_user = User.find_user_by_name("Mick")
-        import pdb; pdb.set_trace()
+       
         self.assertEqual(found_user.password,test_user.password)
 if __name__ == '__main__':
     unittest.main()

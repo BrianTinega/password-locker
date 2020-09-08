@@ -15,7 +15,7 @@ def delete_user(user):
     '''
     A function that deletes a user upon request
     '''
-    user.delete_user()
+    user.delete_user_credential()
 def display_users():
     '''
     A function that displays all registered users
@@ -41,23 +41,18 @@ def main():
         elif commands == 'dis':
             if display_users():
                 print("the following is a list of users you've created")
-                while True:
-                    for user in display_users():
-                        print(f"{user.name} {user.password}")
+                for user in display_users():
+                    print(f"{user.name} {user.password}")
             else:
-                print("No users created yet")
-
+                print("No users created yet")           
         elif commands == 'del':
-            print("Delete credentials")
-            while True:
-               print("enter saved name")
-               del_name = input()
-               print("enter saved password")
-               del_password = input()
-               if del_name and del_password:
-                   found_credentials= user.save_user
-                   print(f"{name} and {password} will be deleted" )
-                   delete_user(found_credentials)
+          
+                delete_user(user) 
+                print("Delete successful")
+            
+               
+           
+
                    
                         
                     

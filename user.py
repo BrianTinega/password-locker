@@ -16,12 +16,12 @@ class User:
         A function that allows us to save users password
         '''
         User.users_list.append(self) 
-    @classmethod
-    def delete_user(cls):
+    
+    def delete_user_credential(self):
         '''
         A function that deletes a users credentials
         '''
-        User.users_list.remove(cls)
+        User.users_list.remove(self)
     @classmethod
     def display_users(cls):
         '''
