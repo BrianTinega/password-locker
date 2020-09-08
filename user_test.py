@@ -36,12 +36,6 @@ class TestUser(unittest.TestCase):
         test_user = User ("Mick","6789")
         test_user.save_user()
         self.assertEqual(User.display_users(),User.users_list)
-    def test_find_user_by_name(self):
-        self.new_user.save_user()
-        test_user= User("Mick","6789")
-        test_user.save_user()
-        found_user = User.find_user_by_name("Mick")
-       
-        self.assertEqual(found_user.password,test_user.password)
+  
 if __name__ == '__main__':
     unittest.main()

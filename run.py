@@ -25,7 +25,7 @@ def display_users():
 def main():
     print("Welcome to password locker..What is your name?")
     user_name = input()
-    print(f"Welcome {user_name} use the following commands: su-signup,del-delete and dis-display users")
+    print(f"Welcome {user_name} use the following commands: su-signup,del-delete, dis-display users, ex-exit")
     while True:
         commands = input().lower()
         if commands == 'su':
@@ -46,10 +46,16 @@ def main():
             else:
                 print("No users created yet")           
         elif commands == 'del':
+            delete_user(user) 
+            print("Delete successful")
           
-                delete_user(user) 
-                print("Delete successful")
+        elif commands == 'ex':
+            print("Goodbye")
+            break  
+               
             
+                
+
                
            
 
